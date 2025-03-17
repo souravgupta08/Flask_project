@@ -1,2 +1,14 @@
 [nix]
 channel = "stable-24_05"
+
+[workflows]
+runButton = "Run Flask"
+
+[[workflows.workflow]]
+name = "Run Flask"
+author = 40584192
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python app.py"
