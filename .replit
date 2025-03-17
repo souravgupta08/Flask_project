@@ -1,14 +1,7 @@
-[nix]
-channel = "stable-24_05"
+language = "python3"
+run = 'python app.py'
+modules = ["python-3.11"]
 
-[workflows]
-runButton = "Run Flask"
-
-[[workflows.workflow]]
-name = "Run Flask"
-author = 40584192
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "python app.py"
+[[ports]]
+localPort = 8080
+externalPort = 80
